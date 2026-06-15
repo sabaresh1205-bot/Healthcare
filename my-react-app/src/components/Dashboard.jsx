@@ -1,5 +1,6 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
+import Ophthalmology from "./specialistPage/Ophthalmology";
 
 function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,12 +45,12 @@ function Dashboard() {
       <div className={`sidebar ${isOpen ? "active" : ""}`}>
         
         <ul>
-          <li><a href="" className="side">Orthopaedics</a></li>
-          <li><a href="" className="side">Ophthalmology</a></li>
-          <li><a href="" className="side">Neurology</a></li>
-          <li><a href="" className="side">Cardiology</a></li>
-          <li><a href="" className="side">Pediatrics</a></li>
-          <li><a href="" className="side">Medical</a></li>
+          <li><a href="/orthopaedics" className="side">Orthopaedics</a></li>
+          <li><a href="/ophthalmology" className="side">Ophthalmology</a></li>
+          <li><a href="/neurology" className="side">Neurology</a></li>
+          <li><a href="/cardiology" className="side">Cardiology</a></li>
+          <li><a href="/pediatrics" className="side">Pediatrics</a></li>
+          <li><a href="/medical" className="side">Medical</a></li>
         </ul>
         </div>
         <br />
