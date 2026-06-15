@@ -1,6 +1,13 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
 import Ophthalmology from "./specialistPage/Ophthalmology";
+import  { useState, useEffect } from "react";
+import React from "react";
+import PieChartComponent from "../components/PieChart";
+import App from "../components/Barchart"
+import Piechart from "./Piechart";
+import Barchart from "./Barchart";
+import Footer from "./Footer";
 
 function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +32,7 @@ function Dashboard() {
           ☰
         </button>
 
-        <h2 className="company-name">My Company</h2>
+        <h2 className="company-name">Health Care</h2>
 
         <div className="search-container">
           <input
@@ -55,10 +62,16 @@ function Dashboard() {
         </div>
         <br />
         <br />
-        <div className="card-middle">
-             <a href="" className="card-middle1">BOOK APPOINMENT</a>
-        </div>
+        
+          <a href="" className="card-middle">
+            BOOK APPOINTMENT
+          </a>
+        
         <br />
+        <br />
+  
+      <h3>NORMAL HUMAN DETAILS</h3>
+    
 
         <div className="dashboard-cards">
   <div className="card">
@@ -91,11 +104,53 @@ function Dashboard() {
     <p>95 mg/dL</p>
   </div>
 </div>
-      
+
+
+    <div
+      style={{
+        display: "flex",
+        gap: "20px",
+        padding: "20px",
+        backgroundColor: "#f1f3f8",
+        minHeight: "100vh",
+      }}
+    >
+      <div 
+        style={{
+          flex: 1,
+          height: "450px",
+          border: "1px solid white",
+          borderRadius: "10px",
+          padding: "10px",
+          backgroundColor: "#0f172a",
+        }}
+      >
+        <Piechart />
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+          height: "450px",
+          border: "1px solid white",
+          borderRadius: "10px",
+          padding: "10px",
+          backgroundColor: "#0f172a",
+        }}
+      >
+        <Barchart />
+      </div>
+    </div>
+    <Footer />
+
+    
+
+
+
+  
     </>
     
   );
   
 }
-
 export default Dashboard;
