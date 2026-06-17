@@ -1,8 +1,6 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
 import Ophthalmology from "./specialistPage/Ophthalmology";
-import  { useState, useEffect } from "react";
-import React from "react";
 import PieChartComponent from "../components/PieChart";
 import App from "../components/Barchart"
 import Piechart from "./Piechart";
